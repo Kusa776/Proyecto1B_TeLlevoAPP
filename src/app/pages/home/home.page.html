@@ -1,24 +1,20 @@
-<<ion-header [translucent]="true">
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      TeLlevoAPP
-    </ion-title>
   </ion-toolbar>
-</ion-header>>
-
+</ion-header>
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Inicio</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
+    <img src="../../assets/duoc.png" class="scaled">
     <strong>Bienvenido a TeLlevoAPP</strong>
     <p class ="ion-margin-top">¿Eres nuevo? ¡Registrate!</p>
     <p><ion-button color="primary" class = "ion-margin-vertical" [routerLink]="['/registro']">Registrarse</ion-button></p>
     <p>¿Ya tienes cuenta? ¡Inicia Sesion!</p>
-    <p><ion-button color="primary" class ="ion-margin-vertical">Iniciar Sesion</ion-button></p>
+    <p><ion-button color="primary" class ="ion-margin-vertical" [routerLink]="['/inicio-sesion']">Iniciar Sesion</ion-button></p>
   </div>
 </ion-content>
 
