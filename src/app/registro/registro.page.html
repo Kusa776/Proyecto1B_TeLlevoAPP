@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar color="tertiary">
-    <ion-title >Registro </ion-title>
+    <ion-buttons slot="start" [routerLink] = "['/home']" >
+      <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+      <ion-button>Volver al inicio</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -32,6 +35,7 @@
             <ion-label position="floating">Confirmar Contraseña</ion-label>
             <ion-input formControlName="confirmacionPassword" type= "password"> </ion-input>
           </ion-item>
+          <p [routerLink]="['/inicio-s']"> ¿Ya tienes una cuenta? ¡Inicia Sesion!</p>
           <ion-button color="tertiary" (click)="guardar()">Registrar </ion-button>
           <br>
         </form>
@@ -41,19 +45,4 @@
   </ion-card>
 </ion-content>
 
-<ion-footer>
-
-  <ion-header>
-    <ion-toolbar color="tertiary">
-      <ion-buttons slot="start">
-        <ion-button [routerLink] = "['/home']" >Home</ion-button>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </ion-buttons>
-      <ion-buttons slot="end">
-        <ion-icon name="chevron-back-outline"></ion-icon>
-        <ion-button [routerLink] = "['/inicio-s']" >login</ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-
-</ion-footer>
+<app-footer></app-footer>

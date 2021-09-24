@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { SoliPageRoutingModule } from './soli-routing.module';
 
 import { SoliPage } from './soli.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SoliPageRoutingModule
+    SoliPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [SoliPage]
 })
