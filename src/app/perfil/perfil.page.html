@@ -1,22 +1,22 @@
 <ion-header>
   <ion-toolbar color="tertiary">
-    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-button [routerLink] = "['/lobby']" ></ion-button>
+      <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-buttons>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+<div id="container">
+<img src="../assets/foto.jpg">
+<p>Nombre: Juan</p>
+<p>Apellido: Perez</p>
+<p>Nombre de Usuario: aaa</p>
+</div>
+
 </ion-content>
 
-<ion-footer>
-
-  <ion-header>
-    <ion-toolbar color="tertiary">
-      <ion-buttons slot="start">
-        <ion-button [routerLink] = "['/lobby']" >Volver</ion-button>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-
-</ion-footer>
+<app-footer></app-footer>
