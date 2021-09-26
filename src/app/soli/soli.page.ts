@@ -5,7 +5,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './soli.page.html',
   styleUrls: ['./soli.page.scss'],
 })
-export class SoliPage implements OnInit {
+export class SoliPage{
+
+  lista: Array<any> = [
+    {
+      titulo: "Fernando"
+    },
+    {
+      titulo: "Agusto"
+    },
+    {
+      titulo: "kusa"
+    },
+    {
+      titulo: "palta"
+    }
+  ]
 
   constructor() { }
 

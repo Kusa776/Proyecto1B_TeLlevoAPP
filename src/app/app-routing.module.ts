@@ -39,7 +39,11 @@ const routes: Routes = [
   {
     path: 'soli',
     loadChildren: () => import('./soli/soli.module').then( m => m.SoliPageModule)
+  },  {
+    path: 'perfiin',
+    loadChildren: () => import('./perfiin/perfiin.module').then( m => m.PerfiinPageModule)
   },
+
 ];
 
 @NgModule({

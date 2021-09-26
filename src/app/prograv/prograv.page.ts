@@ -5,7 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './prograv.page.html',
   styleUrls: ['./prograv.page.scss'],
 })
-export class ProgravPage implements OnInit {
+export class ProgravPage{
+
+  listaIn: Array<any> = [
+    {
+      
+    }
+  ]
+
 
   constructor() { }
 
