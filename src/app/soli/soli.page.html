@@ -16,11 +16,17 @@
       Soli traba
     </ion-card-header>
 
-      <ion-list>
-        <button ion-item [routerLink] = "['/perfiin']" *ngFor="let item of lista">
-          <ion-icon name="car-sport-outline" item-start></ion-icon>
-          {{ item.titulo }}
-        </button>
+      <ion-list *ngIf = "lista">
+        <ion-item *ngFor = "let aux of lista" (click)="detalleViaje(aux)">
+          <ion-avatar>
+            <img [src]= 'aux.imagen' >
+          </ion-avatar>
+
+          <ion-label>
+            <h1> {{aux.apodo}} </h1>
+          </ion-label>
+
+        </ion-item>
       </ion-list>
 
   </ion-card>

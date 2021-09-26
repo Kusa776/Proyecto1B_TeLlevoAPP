@@ -11,18 +11,16 @@ import { AlertController, NavController } from '@ionic/angular';
 })
 export class PerfilPage implements OnInit {
 
+  usuario = null;
 
-  constructor(public fb: FormBuilder,
-    public alertControler: AlertController,
-    public navCtrol: NavController) {
-     
-    
-  }
+  constructor(private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.queryParams.subscribe(params=> {
+      this.usuario = JSON.parse(params.detalle);
+    });
+   }
 
   ngOnInit() {
-    
-    
-
+    console.log(this.usuario);
   }
    
   

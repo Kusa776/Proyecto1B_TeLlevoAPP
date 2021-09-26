@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
-  selector: 'app-perfiin',
-  templateUrl: './perfiin.page.html',
-  styleUrls: ['./perfiin.page.scss'],
+  selector: 'app-detalle-viaje',
+  templateUrl: './detalle-viaje.page.html',
+  styleUrls: ['./detalle-viaje.page.scss'],
 })
-export class PerfiinPage implements OnInit {
+export class DetalleViajePage implements OnInit {
 
   detalle = null;
 
