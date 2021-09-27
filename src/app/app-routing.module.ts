@@ -10,42 +10,49 @@ const routes: Routes = [
   },
   {
     path: 'inicio-s',
-    loadChildren: () => import('./inicio-s/inicio-s.module').then( m => m.InicioSPageModule)
+    loadChildren: () => import('./pages/inicio-s/inicio-s.module').then( m => m.InicioSPageModule)
   },
   {
     path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'contra-r',
-    loadChildren: () => import('./contra-r/contra-r.module').then( m => m.ContraRPageModule)
+    loadChildren: () => import('./pages/contra-r/contra-r.module').then( m => m.ContraRPageModule)
   },
   {
     path: 'lobby',
-    loadChildren: () => import('./lobby/lobby.module').then( m => m.LobbyPageModule)
+    loadChildren: () => import('./pages/lobby/lobby.module').then( m => m.LobbyPageModule)
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
     path: 'prograv',
-    loadChildren: () => import('./prograv/prograv.module').then( m => m.ProgravPageModule)
+    loadChildren: () => import('./pages/soli/prograv/prograv.module').then( m => m.ProgravPageModule)
   },
   {
     path: 'soli',
-    loadChildren: () => import('./soli/soli.module').then( m => m.SoliPageModule)
-  },  {
-    path: 'perfiin',
-    loadChildren: () => import('./perfiin/perfiin.module').then( m => m.PerfiinPageModule)
+    children: [{
+      path :'',
+      loadChildren: () => import('./pages/soli/soli.module').then( m => m.SoliPageModule)
+    },
+    {
+      path: ':id',
+      loadChildren: () => import('./pages/soli/detalle-viaje/detalle-viaje.module').then( m => m.DetalleViajePageModule)
+    }
+
+    ]
+
   },
   {
-    path: 'detalle-viaje',
-    loadChildren: () => import('./detalle-viaje/detalle-viaje.module').then( m => m.DetalleViajePageModule)
+    path: 'perfiin',
+    loadChildren: () => import('./pages/perfiin/perfiin.module').then( m => m.PerfiinPageModule)
   },
 
 ];

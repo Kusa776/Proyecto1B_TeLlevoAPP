@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start" [routerLink] = "['/lobby']" >
+      <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+      <ion-button>Volver al inicio</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list *ngIf="Viajes">
+    <ion-item *ngFor="let aux of Viajes">
+        <ion-avatar slot="start">
+            <img [src]='aux.imagen'>
+        </ion-avatar>
+        <ion-label>
+            <h1>{{aux.nombre}}</h1>
+            <h2>{{aux.precio}}</h2>
+            <h5 [routerLink]="['/soli',aux.id]">Detalles</h5>
+        </ion-label>
+    </ion-item>
+</ion-list>
+
+</ion-content>
+
+<app-footer></app-footer>

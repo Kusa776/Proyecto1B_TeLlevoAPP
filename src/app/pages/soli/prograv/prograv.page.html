@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start" [routerLink] = "['/lobby']">
+      <ion-button></ion-button>
+      <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-buttons>
+      <p id="p">Programar viaje</p>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-content>
+        <form>
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text" #nombre></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Precio</ion-label>
+            <ion-input type="number" #precio></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Imagen</ion-label>
+            <ion-input type="text" #imagen></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Capacidad Total</ion-label>
+            <ion-input type="number" #capacidadTotal></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Descripcion</ion-label>
+            <ion-input type="text" #descripcion></ion-input>
+          </ion-item>
+          <ion-button (click)="agregarViaje(nombre,precio,imagen,capacidadTotal,descripcion)">
+              ¡Programar Viaje!
+          </ion-button>
+        </form>
+      </ion-card-content>      
+  </ion-card>
+</ion-content>
+
+<app-footer></app-footer>
