@@ -7,16 +7,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="container">
 <ion-list *ngIf="Viajes">
-    <ion-item *ngFor="let aux of Viajes">
+    <ion-item *ngFor="let ai of Viajes">
         <ion-avatar slot="start">
-            <img [src]='aux.imagen'>
+            <img [src]='ai.imagen'>
         </ion-avatar>
         <ion-label>
-            <h1>{{aux.nombre}}</h1>
-            <h2>{{aux.precio}}</h2>
-            <h5 [routerLink]="['/soli',aux.id]">Detalles</h5>
+            <h1>{{ai.nombre}}</h1>
+            <h1>{{ai.precio}}</h1>
+            <ion-button color="primary" [routerLink]="['/soli',ai.id]">Detalles</ion-button>
         </ion-label>
     </ion-item>
 </ion-list>

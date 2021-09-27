@@ -7,8 +7,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> 
-
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card id="carta">
+        <img [src]='Viaje.imagen' />
+        <ion-card-header>
+          <ion-card-subtitle>{{Viaje.cantidadTotal}}</ion-card-subtitle>
+          <ion-card-title>{{Viaje.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{Viaje.descripcion}}
+        </ion-card-content>
+      </ion-card>
+      <p><ion-button color="primary" class ="ion-margin-vertical">Viajar</ion-button></p> Precio: ${{Viaje.precio}}
+  </div>
 </ion-content>
+
 
 <app-footer></app-footer>
